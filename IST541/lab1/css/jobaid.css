@@ -36,6 +36,8 @@ h3, h4 {
 	color: #FFFFFF;
 	font-weight: bold;
 	font-size: 150%;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
  }
 
 .stepContent{ 
@@ -44,23 +46,25 @@ h3, h4 {
 	display: flex;
 	flex-wrap:wrap;
 	justify-content: center;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
 }
 
 .stepDescription {
-	width:55%;
+	width:65%;
 	padding:5px;
 	line-height:145%;
 }
 
 .stepImage {
-	width:40%;	
+	width:30%;	
 	padding:5px;
 	text-align: center;
 }
 
 .stepImage img {
-    width:100%;
-    height:auto;
+    width:auto;
+    height:200px;
 }
 
 strong {
