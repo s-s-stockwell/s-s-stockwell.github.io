@@ -72,7 +72,13 @@ strong {
 }
 
 .warning {
-	background-color: #b7cbffff;
+	background-color:#b7cbffff;
 	padding:10px;
-	border-radius:15px;
+	border-radius:12px;
+}
+.material-icons {
+	color:#6c8ad7ff;
+	font-size:3em;
+	padding-left:10px;
+	padding-right:10px;
 }
