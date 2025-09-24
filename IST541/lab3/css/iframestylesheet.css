@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* CSS Document */
+body {text-align: center;
+background-color:#17354cff;
+	color: #ffffff;
+	font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+h1, h2 { 
+	color: #FFFFFF;
+	text-align:center;     /* centers h1 and h2 content */
+	font-family: "Lato", sans-serif;
+	font-weight: 500;
+	font-style: bold;
+}
+a {
+	padding: 15px;
+margin: 3px;
+	font-size: 125%;
+	background-color:  #0097a7ff; 
+	color: #FFFFFF; 
+	border-radius: 12px;
+}
+a:hover {
+	font-size:200%;
+	background-color: #6dceebff; 
+	color: #FFFFFF; 
+}
+.container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-top:56.25%;
+}
+.responsive-iframe {
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width:100%;
+	height:100%;
+}
