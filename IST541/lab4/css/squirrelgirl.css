@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+#wrapper {
+width: 900px;
+margin: 0 auto;
+text-align: center;
+}
+
+ #computerscience {
+border: black 5px solid;
+}
+ 
+ #squirrelgirl {
+display: none; /* hides content */
+border: black 5px solid;
+}
+
