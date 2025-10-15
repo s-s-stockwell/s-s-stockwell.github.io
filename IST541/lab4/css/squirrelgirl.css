@@ -19,3 +19,6 @@ border: black 5px solid;
 display: none; /* hides content */
 border: black 5px solid;
 }
+.choices {
+cursor: pointer;
+}
