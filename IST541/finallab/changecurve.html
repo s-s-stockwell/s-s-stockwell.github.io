@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Change Curve</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link href="css/finalstyle.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+	<nav>
+    <h1>Menu</h1>
+    <a href="home.html">Home</a>
+    <a href="changecurve.html" class="active">The Change Curve</a>
+	<a href="barriers.html">Barriers to Change</a>
+	<a href="collapsible.html">Your Change Guide</a>
+	<a href="changeplan.html">Your Change Plan</a>
+	<a href="resources.html">Resources</a>
+  </nav>
+ <main class="page">
+	  <main class="page">
+	<header class="top-banner">
+  <h2>Your Change Compass: Navigating Uncertainty with Confidence</h2>
+</header>
+	<div id="wrapper">
+<h1>The Change Curve</h1>
+<p class="alt">Use the audio player below the change curve image to hear about the Kubler-Ross Change Curve. Then, hover over each stage on the curve to learn more about each part of the change process.</p>
+<table border="0">
+<tr>
+<td>
+	<div class="image-wrap" id="curve">
+  <img src="img/changecurve.png" alt="Kübler-Ross change curve">
+  <button class="hotspot" style="left:10%; top:40%"  data-text="The initial reaction to change, this stage often brings surprise or disbelief. You may feel confused, frozen, or unsure how to respond as you begin to process what’s happening."           aria-label="Shock"></button>
+  <button class="hotspot" style="left:25%; top:48%" data-text="This stage is marked by refusal to accept change. You might downplay the impact or believe it won't last. This is a natural defense mechanism to save you from overwhelm."          aria-label="Denial"></button>
+  <button class="hotspot" style="left:36%; top:72%" data-text="Feelings of resistance surface as the reality of the change sets in. You may question the reasons for change or feel powerless to influence it, causing emotions like anger, blame, or anxiety."     aria-label="Frustration"></button>
+  <button class="hotspot" style="left:52%; top:83%" data-text="Depression is the low point of the curve. Motivation drops, and you may feel tired, withdrawn, or uncertain about the future. This stage is where productivity and morale typically dip the most."      aria-label="Depression"></button>
+  <button class="hotspot" style="left:67%; top:61%" data-text="Gradually, curiosity returns, and you are ready to test new approaches. You may start exploring how the change might work and trying small steps to adapt." aria-label="Experimentation"></button>
+  <button class="hotspot" style="left:72%; top:30%" data-text="As you rebuild confidence in the face of change, you consciously choose to engage with the change. This stage occurs as you begin to see positive results or understand the benefits of the change. Commitment to new behaviors increases at this point."        aria-label="Decision"></button>
+  <button class="hotspot" style="left:89%; top:10%;"  data-text="The change becomes part of everyday life. You feel more comfortable, capable, and aligned with the new direction, and you're ready for what comes next!"     aria-label="Integration"></button>
+  <div id="answer" role="tooltip" aria-live="polite"></div>
+</div>
+
+<script>
+  function showAnswer(el){
+    const $spot = $(el);
+    $('#answer').text($spot.data('text')||'')
+                .css({ left:$spot.css('left'), top:$spot.css('top') })
+                .show();
+  }
+  function hideAnswer(){ $('#answer').hide().text(''); }
+
+  $('#curve').on('mouseenter focus', '.hotspot', function(){ showAnswer(this); });
+  $('#curve').on('mouseleave blur',  '.hotspot', hideAnswer);
+  $('#curve').on('click',            '.hotspot', function(e){ e.preventDefault(); showAnswer(this); });
+  $(document).on('click', function(e){ if(!$.contains($('#curve')[0], e.target)) hideAnswer(); });
+</script>
+       <audio controls src="audio/changecurve.mp3"> 
+          This browser does not support HTML5 audio
+          </audio>
+           </td>
+        </tr>
+   </table>     </div>
+<details>
+			<summary class="stepTitle">
+			Audio Transcript
+			</summary>
+				<div class="stepContent">
+					<div class="stepDescription">
+					<p>Change can be tough, and the Kübler-Ross Change Curve helps us understand how people typically react to it. Originally based on the stages of grief, it describes the emotional journey we experience during major change. It starts with Shock and Denial, when we resist or struggle to accept what’s happening. Then we often move into Frustration or Depression, as the reality of the change sets in. Over time, we reach Experimentation—trying new ways of working or thinking. This leads to Acceptance, and finally, Integration, where the change becomes part of our new normal. Understanding these stages helps leaders and teams support one another, building empathy and resilience through times of change.
+					</p>
+				
+					</div>
+				</div>
+			</details>
+	</main>
+</body>
+</html>
