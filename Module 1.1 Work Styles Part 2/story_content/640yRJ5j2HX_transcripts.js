@@ -1,0 +1,5 @@
+
+(function() {
+    const data = {"transcripts":[{"name":"captions","cues":[{"start":576,"text":"I think we can all agree after our first meeting that we need to lay a foundation for working effectively as a team. "},{"start":5952,"text":"I'm confident that we can work well together if we can recognize our differences and appreciate each other's strengths."},{"start":11968,"text":"I'm really good at listening and appreciating good ideas. "},{"start":14752,"text":"If you ever need someone to bounce ideas off of, I'm great for that. "},{"start":18176,"text":"I'm all about celebrating our wins as a team, and I can be here to support you if you're having a hard time, too. "},{"start":23904,"text":"What I need from my team members is openness to talk things through and recognition for my contributions."},{"start":29088,"text":"Appreciating each other's work is essential to me. "},{"start":31552,"text":"I'll definitely be cheering on your good ideas, "},{"start":33600,"text":"and I hope you can do the same for me, too."}]}]};
+    window.globalLoadJsAsset('story_content/640yRJ5j2HX_transcripts.js', JSON.stringify(data));
+})();
