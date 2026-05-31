@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/squirrelgirl.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+<h1>Which animal helps superheroes study Computer Science?</h1>
+<h3>Click on one of the following choices</h3>
+
+<h2 onclick="wrongAnswer()" class="choices"> Spider </h2>
+<h2 onclick="wrongAnswer()" class="choices"> Hawk </h2>
+<h2 onclick="wrongAnswer()" class="choices"> Lizard </h2>
+<h2 onclick="rightAnswer()" class="choices"> Squirrel </h2>
+
+<div id="feedback"></div>
+<img id="squirrel" src="img/squirrel.jpg" />
+</div>
+	<script>
+      function rightAnswer(){
+         $("#feedback").html("<h2 style='color:green'> Correct! Squirrels are awesome and very educated.</h2>");
+         $("#squirrel").show();
+      }
+		function wrongAnswer(){
+      $("#feedback").html("<h2 style='color:red'>This animal has never even seen a computer. Try again. </h2>");
+      $("#squirrel").hide();
+   }
+
+   </script>
+
+</body>
+</html>

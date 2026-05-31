@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Question 1</title>
+	<link href="css/squirrelgirl.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+ 
+<h1>What Marvel superhero studies Computer Science?</h1>
+ 
+<h3 id="hint">Hint: Hover over the image below to find out!</h3>
+		<img onmouseenter="showAnswer()" id="computerscience"  src="img/computerscience.png" width=1000; height=563;  />
+<img onmouseleave="hideAnswer()" id="squirrelgirl" src="img/squirrelgirl.jpg" />
+
+
+ 
+      <div id="answer"></div>  <!-- This is a placeholder to display the answer-->
+ 
+</div> <!-- closing  “wrapper” -->
+	<script>
+ function showAnswer() {
+	   $("#computerscience").hide();
+	   $("#squirrelgirl").show();
+	   $("#answer").html("<h2>The Unbeatable Squirrel Girl, of course!</h2>");
+	}
+
+function hideAnswer() {
+	   $("#computerscience").show();
+	   $("#squirrelgirl").hide();
+	   $("#answer").html("");  
+	}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Change Barriers</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link href="css/finalstyle.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav>
+    <h1>Menu</h1>
+    <a href="home.html">Home</a>
+    <a href="changecurve.html">The Change Curve</a>
+	<a href="barriers.html" class="active">Barriers to Change</a>
+	<a href="collapsible.html">Your Change Guide</a>
+	<a href="changeplan.html">Your Change Plan</a>
+	<a href="resources.html">Resources</a>
+  </nav>
+	 <main class="page">
+	<header class="top-banner">
+  <h2>Your Change Compass: Navigating Uncertainty with Confidence</h2>
+</header>
+		<div id="wrapper">
+<h1>Roadblocks to Change</h1>
+<p class="alt">Use the audio player below to hear about some common roadblocks to change. Think about which ones you've encountered and what you can do to move past them on your path to change.</p>
+<table border="0">
+<tr>
+<td>
+	<div class="image-wrap" id="roadblocks">
+  <img src="img/roadblocks2.png" alt="Roadblocks to Change">
+  <button class="hotspot" style="left:16%; top:62%" data-text="Fear and uncertainty are a large barrier to change."          aria-label="Fear"></button>
+  <div id="answer" role="tooltip" aria-live="polite"></div>
+</div>
+
+<script>
+function showAnswer(el){
+  const $spot = $(el);
+  const $tip  = $spot.closest('.image-wrap').find('#answer'); // local tip
+  $tip.text($spot.data('text') || '')
+      .css({ left: $spot.css('left'), top: $spot.css('top') })
+      .show();
+}
+
+function hideAnswer(){
+  $('.image-wrap #answer').hide().text('');
+}
+
+  $('#roadblocks').on('mouseenter focus', '.hotspot', function(){ showAnswer(this); });
+  $('#roadblocks').on('mouseleave blur',  '.hotspot', hideAnswer);
+  $('#roadblocks').on('click',            '.hotspot', function(e){ e.preventDefault(); showAnswer(this); });
+  $(document).on('click', function(e){ if(!$.contains($('#roadblocks')[0], e.target)) hideAnswer(); });
+</script>
+        <audio controls src="audio/roadblocks.mp3"> 
+          This browser does not support HTML5 audio
+          </audio>
+           </td>
+        </tr>
+   </table>     </div>
+<details>
+			<summary class="stepTitle">
+			Audio Transcript
+			</summary>
+				<div class="stepContent">
+					<div class="stepDescription">
+					<p>Even when change is necessary or beneficial, it’s not always easy to make it happen. There are a few common roadblocks that can get in the way of successful change.
+
+The first is fear and uncertainty. People naturally worry about what change means for them — will their job be harder, will they still succeed, or will they lose control? This fear often leads to resistance, even when the change is positive.
+
+Another common barrier is lack of communication. When people don’t understand the reason behind the change or how it affects them, they’re more likely to fill in the blanks with assumptions or rumors. Clear, consistent communication is key to building trust.
+
+Next, there’s habit and comfort. We all get used to doing things a certain way, and old habits can be hard to break. Without support and training, people may slip back into old routines.
+
+Limited involvement is another roadblock. If employees feel change is being done to them instead of with them, they’re less likely to engage. Involving people early helps create a sense of ownership and buy-in.
+
+Finally, lack of leadership support can stall even the best-planned initiatives. When leaders don’t model the change or fail to reinforce it, others quickly lose motivation.
+
+By recognizing these roadblocks — fear, poor communication, habit, lack of involvement, and lack of leadership — organizations can plan ahead, address concerns early, and create smoother, more successful change experiences.
+					</p>
+				
+					</div>
+				</div>
+			</details>
+	</main>
+</body>
+</html>

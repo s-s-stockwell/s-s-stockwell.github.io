@@ -1,0 +1,231 @@
+/* CSS Document */
+/* All comments go between the front slash and asterisk symbols */
+
+:root {
+  --sidebar-w: 170px;  
+	--header-h: 40px;
+}
+body {
+	background-color: #17354c;   /* background color */
+	color: #2c3236ff;          /* text color for the entire page */
+font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+	 padding-left: var(--sidebar-w);  
+	margin: 0;
+  padding-top: 70px;
+}
+
+.top-banner {
+  position: fixed;       
+  top: 0;
+  left: var(--sidebar-w); 
+	right:0;
+  height: var(--header-h);  
+  color: white; 
+	display: flex;
+  align-items: center;     
+  justify-content: center;
+	padding: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+z-index: 1000;
+background: #1f4766ff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+h1 { 
+	color: #FFFFFF;
+	text-align:center;    
+	font-family: "Lato", sans-serif;
+	font-weight: 500;
+	font-style: bold;
+}
+h2 {
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: 500;
+	font-style:normal;
+}
+h3, h4 {
+	color: #fff;
+	text-align: left;
+}
+p.alt {
+	color:white;
+	font-family: "Lato", sans-serif;
+ 	font-weight: 300;
+ 	font-style: normal;
+	line-height: 1.5;
+}
+#wrapper {
+	width: 90%;
+	margin: 0 auto;   
+}
+
+/* styles for the "stepTitle" class, notice that "stepTitle" is preceded by a dot */
+.stepTitle{
+	padding:10px;
+	text-align:left;
+	background-color:#0097a7;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 150%;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+ }
+
+.stepContent{ 
+	background-color: white;
+	padding:7px;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+
+.stepDescription {
+	width:65%;
+	padding:5px;
+	line-height:145%;
+}
+
+.stepImage {
+	width:30%;	
+	padding:5px;
+	text-align: center;
+}
+
+.stepImage img {
+    width:auto;
+    height:200px;
+}
+
+strong {
+  font-weight: 800;
+}
+
+.warning {
+	background-color:#b7cbffff;
+	padding:10px;
+	border-radius:12px;
+}
+.material-icons {
+	color:#6c8ad7ff;
+	font-size:3em;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+/* styles for the "wrapper" div, notice that "wrapper" is preceded by "#" */
+nav {
+      position: fixed; top: 0; left: 0;
+      width: var(--sidebar-w);
+      height: 100vh;            /* full screen height */
+      background: #111827;      
+      color: #e5e7eb;           
+      padding: 20px;
+      display: flex; flex-direction: column; gap: 10px;
+	z-index: 2000;
+    }
+    nav h1 {
+      font-size: 1rem; margin: 0 0 12px 0; color: #fff;
+    }
+    nav a {
+      display: block;
+      color: #e5e7eb; text-decoration: none;
+      padding: 10px 12px; border-radius: 8px;
+    }
+    nav a:hover { background: #6c8ad7; }        
+
+    /* Centered page container */
+    .page {
+      max-width: 900px;        /* controls line length / centering width */
+      margin: 0 auto;          /* centers content */
+      padding: 28px 20px 60px; /* room around content */
+    }
+
+
+    .wrapper {
+      background: #ffffff;
+      padding: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.04); 
+    }
+    .wrapper h1 {
+      font-size: 1.25rem;
+      margin: 0 0 12px 0;
+    }
+
+    /* Table cleanup (keeps your table, just styles it) */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 12px;
+      vertical-align: top;
+      text-align: center;
+    }
+    img { max-width: 100%; height: auto; display: block; margin: 0 auto 10px; }
+    audio { width: 100%; max-width: 520px; }
+	
+	video {
+  display: block;  
+  margin: 0 auto;      
+}
+.image-wrap{
+	position:relative;
+	display:inline-block;
+	overflow: visible;
+	max-width:960px;
+	width:100%
+	}
+  .image-wrap img{
+	  display:block;
+	  width:100%;
+	  height:auto;
+	  border-radius:8px
+	}
+  .hotspot{
+	  position:absolute;
+	  width:50px;
+	  height:50px;
+	  transform:translate(-50%,-50%);
+	  background:transparent;
+	  border:0;
+	  cursor:pointer;
+	  border-radius:50%
+	}
+  .hotspot:focus-visible{
+	  outline:3px solid #7db4ff;
+	  outline-offset:2px
+	}
+ #answer{
+	  position:absolute;
+	  display:none;
+	  z-index:9999;
+	  background:#cbf3ffff;
+	  color:#222;
+	  padding:10px;
+	  border-radius:8px;
+	  transform:translate(-50%,calc(-100% - 12px));
+	  white-space:normal;
+	 max-width: 240px;
+	 min-width: 200px;
+	 line-height: 1.2;
+	 box-shadow: 0 8px 24px rgba(0,0,0,.25);
+	}
+  #answer::after{
+	  content:"";
+	  position:absolute;
+	  left:50%;
+	  bottom:-6px;
+	  transform:translateX(-50%);
+	  border-width:6px 6px 0;
+	  border-style:solid;
+	  border-color:#cbf3ffff transparent transparent;
+	}
